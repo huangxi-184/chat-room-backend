@@ -1,0 +1,40 @@
+@base_url = 'http://localhost:3000'
+@content_type = 'application/json
+@authorization = ''
+
+### POST 请求
+POST http://localhost:3000/user/register
+Content-Type: application/json
+
+{
+  "username": "wangwenzhuo",
+  "password": "wangwenzhuo",
+  "nickName":"王文卓",
+  "email":"test@163.com",
+  "captcha":"636445"
+}
+
+
+### GET 请求
+GET http://localhost:3000/user/register-captcha?address=huangxi0226@163.com
+Content-Type: application/json
+
+
+### POST 请求
+POST http://localhost:3000/user/login
+Content-Type: application/json
+
+{
+  "username": "huangxi",
+  "password": "huangxi0226"
+}
+
+###
+GET http://localhost:3000/user/info
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsInVzZXJuYW1lIjoiaHVhbmd4aSIsImlhdCI6MTczMTEzMDcwNiwiZXhwIjoxNzMxNzM1NTA2fQ.4usIRh6FKZMEru4ByhzQ6zey5vPX59IpF8EfysG0-Fc
+
+### 修改密码
+POST http://localhost:3000/user/update_password
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsInVzZXJuYW1lIjoiaHVhbmd4aSIsImlhdCI6MTczMTEzMDcwNiwiZXhwIjoxNzMxNzM1NTA2fQ.4usIRh6FKZMEru4ByhzQ6zey5vPX59IpF8EfysG0-Fc
